@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог моделей Porsche - 911, Taycan, Cayenne, Panamera. Технічні характеристики та фото.">
+    <title>Porsche - Каталог моделей | Офіційний сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" width="120">
+            </div>
+            <nav>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html" class="active">Каталог моделей</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html">Про автора</a></li>
+                    <li><a href="#contact" class="contact-btn">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-section">
+            <h1>Каталог моделей Porsche</h1>
+            <div class="catalog-grid">
+                <!-- Картка 1 -->
+                <div class="product-card">
+                    <img src="images/porsche_911.jpg" alt="Porsche 911" loading="lazy">
+                    <div class="product-info">
+                        <h2>Porsche 911</h2>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 450 к.с.</li>
+                            <li><i class="fas fa-gas-pump"></i> 3.0L Turbo</li>
+                            <li><i class="fas fa-bolt"></i> 0-100 км/год за 3.7с</li>
+                        </ul>
+                        <button class="details-btn" data-model="911">Детальніше</button>
+                    </div>
+                </div>
+
+                <!-- Картка 2 -->
+                <div class="product-card">
+                    <img src="images/porsche_cayenne.jpg" alt="Porsche Cayenne" loading="lazy">
+                    <div class="product-info">
+                        <h2>Porsche Cayenne</h2>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 550 к.с.</li>
+                            <li><i class="fas fa-gas-pump"></i> 4.0L V8</li>
+                            <li><i class="fas fa-bolt"></i> 0-100 км/год за 4.1с</li>
+                        </ul>
+                        <button class="details-btn" data-model="cayenne">Детальніше</button>
+                    </div>
+                </div>
+
+                <!-- Картка 3 -->
+                <div class="product-card">
+                    <img src="images/porsche_taycan.jpg" alt="Porsche Taycan" loading="lazy">
+                    <div class="product-info">
+                        <h2>Porsche Taycan</h2>
+                        <ul class="specs">
+                            <li><i class="fas fa-battery-full"></i> 400 км заряд</li>
+                            <li><i class="fas fa-bolt"></i> 680 к.с.</li>
+                            <li><i class="fas fa-tachometer-alt"></i> 0-100 км/год за 2.8с</li>
+                        </ul>
+                        <button class="details-btn" data-model="taycan">Детальніше</button>
+                    </div>
+                </div>
+
+                <!-- Картка 4 -->
+                <div class="product-card">
+                    <img src="images/porsche_panamera.jpg" alt="Porsche Panamera" loading="lazy">
+                    <div class="product-info">
+                        <h2>Porsche Panamera</h2>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 330 к.с.</li>
+                            <li><i class="fas fa-gas-pump"></i> 2.9L V6</li>
+                            <li><i class="fas fa-bolt"></i> 0-100 км/год за 5.6с</li>
+                        </ul>
+                        <button class="details-btn" data-model="panamera">Детальніше</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="test-drive" class="test-drive-section">
+    <h2>Записатись на тест-драйв</h2>
+    
+    <form id="test-drive-form" class="contact-form">
+        <div class="form-group">
+            <input type="text" id="td-name" name="name" placeholder="Ваше ім'я" required minlength="2">
+            <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <input type="tel" id="td-phone" name="phone" placeholder="Ваш телефон" required>
+            <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <select id="td-model" name="model" required>
+                <option value="">Оберіть модель</option>
+                <option value="911">Porsche 911</option>
+                <option value="cayenne">Porsche Cayenne</option>
+                <option value="taycan">Porsche Taycan</option>
+                <option value="panamera">Porsche Panamera</option>
+            </select>
+            <span class="error-message"></span>
+        </div>
+    </form>
+
+    <!-- КНОПКА ПОЗА ФОРМОЮ, але всередині секції -->
+    <div class="form-submit-wrapper">
+        <button type="submit" form="test-drive-form" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Записатись
+        </button>
+    </div>
+</section>
+
+    </main>
+
+    <div id="toTop" class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kotletasb3.0/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="viber://chat?number=+380123456789"><i class="fab fa-viber"></i></a>
+            </div>
+            <p>© 2023 Котляренко Сергій. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно деталей -->
+    <div id="model-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Porsche 911</h2>
+            <div id="modal-content">
+                <div class="modal-grid">
+                    <div class="modal-image">
+                        <img src="images/porsche_911_detail.jpg" alt="Porsche 911" id="modal-img">
+                    </div>
+                    <div class="modal-specs">
+                        <h3>Технічні характеристики:</h3>
+                        <ul id="modal-specs-list">
+                            <li><i class="fas fa-tachometer-alt"></i> Потужність: 450 к.с.</li>
+                            <li><i class="fas fa-gas-pump"></i> Двигун: 3.0L Turbo</li>
+                            <li><i class="fas fa-bolt"></i> 0-100 км/год: 3.7с</li>
+                            <li><i class="fas fa-road"></i> Макс. швидкість: 308 км/год</li>
+                            <li><i class="fas fa-money-bill-wave"></i> Ціна: від €120,000</li>
+                        </ul>
+                        <div class="modal-description" id="modal-description">
+                            <h3>Опис моделі:</h3>
+                            <p>Porsche 911 - це ікона спортивних автомобілів, яка поєднує в собі багату історію та сучасні технології.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-contact-btn" id="modal-contact-btn">
+                    <i class="fas fa-phone-alt"></i> Записатись на тест-драйв
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно успіху -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>Ваша заявка успішно відправлена! Ми зв'яжемося з вами найближчим часом.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

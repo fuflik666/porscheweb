@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Про автора сайту Porsche - Котляренко Сергій. Досвід, навички та контактна інформація.">
+    <title>Про автора | Porsche</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" width="120" loading="lazy">
+            </div>
+            <nav>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог моделей</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html" class="active">Про автора</a></li>
+                    <li><a href="#contact" class="contact-btn">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="author-section">
+            <div class="author-container">
+                <div class="author-photo">
+                    <img src="images/avatar.jpg" alt="Котляренко Сергій" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h1>Котляренко Сергій</h1>
+                    <h2>Автор та розробник сайту Porsche</h2>
+                    <div class="author-bio">
+                        <p>Привіт! Мене звати Котляренко Сергій, я створив сайт для індивідуального проєкту, присвяченим бренду Porsche.</p>
+                <p>Я живу в Черкасах, та навчаюся в Бізнес коледжі Кафедра комп’ютерної інженерії та інформаційних технологій
+                    Відділення інженерії програмного забезпечення</p>
+                <p>Моя мета — не лише розвивати свої технічні навички, але й поділитися своєю пристрастю до автомобілів з іншими.</p>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-check"></i> HTML5, CSS3, JavaScript</li>
+                            <li><i class="fas fa-check"></i> jQuery, Bootstrap</li>
+                            <li><i class="fas fa-check"></i> Адаптивний дизайн</li>
+                            <li><i class="fas fa-check"></i> Оптимізація продуктивності</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма зворотного зв'язку -->
+        <section id="contact" class="contact-section">
+            <h2><i class="fas fa-envelope"></i> Написати мені</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" name="name" placeholder="Ваше ім'я" required minlength="2">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" name="email" placeholder="Ваш email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" name="message" placeholder="Ваше повідомлення" required minlength="10"></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Надіслати
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <div id="toTop" class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kotletasb3.0/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="viber://chat?number=+380123456789"><i class="fab fa-viber"></i></a>
+            </div>
+            <p>© 2023 Котляренко Сергій. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно успіху -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p><i class="fas fa-check-circle"></i> Ваше повідомлення успішно відправлено!</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

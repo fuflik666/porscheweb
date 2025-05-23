@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Галерея автомобілів Porsche - фотографії моделей 911, Taycan, Cayenne, Panamera та інших">
+    <title>Porsche - Галерея | Офіційний сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" width="120" loading="lazy">
+            </div>
+            <nav>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог моделей</a></li>
+                    <li><a href="gallery.html" class="active">Галерея</a></li>
+                    <li><a href="about.html">Про автора</a></li>
+                    <li><a href="#contact" class="contact-btn">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <h1>Галерея Porsche</h1>
+            <div class="gallery-grid">
+                <!-- Porsche 911 -->
+                <div class="gallery-item">
+                    <img src="images/porsche_911.jpg" alt="Porsche 911 Carrera S" loading="lazy">
+                    <div class="img-caption">Porsche 911 Carrera S</div>
+                </div>
+                
+                <!-- Porsche Cayenne -->
+                <div class="gallery-item">
+                    <img src="images/porsche_cayenne.jpg" alt="Porsche Cayenne Turbo" loading="lazy">
+                    <div class="img-caption">Porsche Cayenne Turbo</div>
+                </div>
+                
+                <!-- Porsche Taycan -->
+                <div class="gallery-item">
+                    <img src="images/porsche_taycan.jpg" alt="Porsche Taycan Turbo S" loading="lazy">
+                    <div class="img-caption">Porsche Taycan Turbo S</div>
+                </div>
+                
+                <!-- Porsche Panamera -->
+                <div class="gallery-item">
+                    <img src="images/porsche_panamera.jpg" alt="Porsche Panamera 4S" loading="lazy">
+                    <div class="img-caption">Porsche Panamera 4S</div>
+                </div>
+                
+                <!-- Porsche 718 Cayman -->
+                <div class="gallery-item">
+                    <img src="images/porsche_718_cayman.jpg" alt="Porsche 718 Cayman" loading="lazy">
+                    <div class="img-caption">Porsche 718 Cayman</div>
+                </div>
+                
+                <!-- Porsche Macan -->
+                <div class="gallery-item">
+                    <img src="images/porsche_macan.jpg" alt="Porsche Macan Turbo" loading="lazy">
+                    <div class="img-caption">Porsche Macan Turbo</div>
+                </div>
+                
+                <!-- Porsche 918 Spyder -->
+                <div class="gallery-item">
+                    <img src="images/porsche_918_spyder.jpg" alt="Porsche 918 Spyder" loading="lazy">
+                    <div class="img-caption">Porsche 918 Spyder</div>
+                </div>
+                
+                <!-- Porsche 356 -->
+                <div class="gallery-item">
+                    <img src="images/porsche_356.jpg" alt="Porsche 356" loading="lazy">
+                    <div class="img-caption">Porsche 356 (1956)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма для відправки фото -->
+        <section id="upload-photo" class="upload-section">
+            <h2><i class="fas fa-camera-retro"></i> Надішліть свої фото Porsche</h2>
+            <form id="upload-form" class="upload-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="photo-name" name="name" placeholder="Ваше ім'я" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="photo-email" name="email" placeholder="Ваш email" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="photo-description" name="description" placeholder="Опис фото (модель авто, місце зйомки)" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="file-upload">
+                    <label for="photo-file">
+                        <i class="fas fa-cloud-upload-alt"></i> Обрати фото
+                        <span id="file-name">Файл не обрано</span>
+                    </label>
+                    <input type="file" id="photo-file" name="photo" accept="image/*" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Надіслати фото
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Модальне вікно для зображень -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-caption" id="modal-caption"></div>
+    </div>
+
+    <!-- Модальне вікно успіху -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p><i class="fas fa-check-circle"></i> Дякуємо! Ваше фото успішно відправлено на модерацію.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kotletasb3.0/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="viber://chat?number=+380123456789"><i class="fab fa-viber"></i></a>
+            </div>
+            <p>© 2023 Котляренко Сергій. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
